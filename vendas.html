@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME MOTORS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo-area">
+        <img src="prime imagi.jpeg" alt="Prime Motors">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="vendas.html">Vendas</a></li>
+    </nav>
+
+</header>
+
+<section class="banner">
+
+    <div class="banner-text">
+        <h1>PRIME MOTORS</h1>
+        <h2>Os melhores veículos do mercado</h2>
+
+        <p>
+            Compra, venda e aluguel de veículos premium.
+        </p>
+
+        <a href="catalogo.html" class="btn">
+            Ver Catálogo
+        </a>
+    </div>
+
+</section>
+
+<section class="ofertas">
+    <section class="beneficios">
+
+    <h2>POR QUE ESCOLHER A PRIME MOTORS?</h2>
+
+    <div class="beneficios-box">
+
+        <div class="beneficio">
+            <h3>🚗 Desconto no fim de semana</h3>
+            <p>
+                Aproveite condições especiais para locações realizadas entre sexta e domingo.
+            </p>
+        </div>
+
+        <div class="beneficio">
+            <h3>💳 Plano mensal</h3>
+            <p>
+                Pacotes exclusivos para clientes que desejam aluguel contínuo com menor custo.
+            </p>
+        </div>
+
+        <div class="beneficio">
+            <h3>🔥 Pacotes especiais</h3>
+            <p>
+                Promoções personalizadas para viagens, eventos e uso corporativo.
+            </p>
+        </div>
+
+        <div class="beneficio">
+            <h3>🛡️ Segurança garantida</h3>
+            <p>
+                Todos os veículos passam por revisão completa antes da entrega.
+            </p>
+        </div>
+
+        <div class="beneficio">
+            <h3>⚡ Atendimento rápido</h3>
+            <p>
+                Suporte especializado para agilizar reservas e negociações.
+            </p>
+        </div>
+
+        <div class="beneficio">
+            <h3>🏆 Veículos premium</h3>
+            <p>
+                Trabalhamos apenas com carros de alto padrão e excelente conservação.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="simulacao">
+
+    <h2>SIMULE SUA COMPRA</h2>
+
+    <div class="simulacao-box">
+
+        <div class="simulacao-info">
+
+            <h3>Realize sua simulação</h3>
+
+            <p>
+                Faça uma estimativa rápida do valor do seu próximo veículo premium.
+            </p>
+
+            <ul>
+                <li>✔ Entrada facilitada</li>
+                <li>✔ Parcelamento em até 60x</li>
+                <li>✔ Aprovação rápida</li>
+                <li>✔ Planos personalizados</li>
+            </ul>
+
+        </div>
+
+        <form class="form-simulacao">
+
+            <input type="text" placeholder="Seu nome">
+
+            <input type="email" placeholder="Seu e-mail">
+
+            <input type="text" placeholder="Modelo desejado">
+
+            <input 
+                type="text" 
+                id="valorEntrada" 
+                placeholder="Valor de entrada"
+            >
+
+            <select>
+                <option>Quantidade de parcelas</option>
+                <option>12x</option>
+                <option>24x</option>
+                <option>36x</option>
+                <option>48x</option>
+                <option>60x</option>
+            </select>
+
+            <button type="submit">
+                Simular Agora
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 PRIME MOTORS - Todos os direitos reservados</p>
+</footer>
+
+<script>
+
+const valorEntrada = document.getElementById('valorEntrada');
+
+valorEntrada.addEventListener('input', function(e){
+
+    let valor = e.target.value;
+
+    valor = valor.replace(/\D/g, '');
+
+    valor = (valor / 100).toFixed(2) + '';
+
+    valor = valor.replace(".", ",");
+
+    valor = valor.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+    e.target.value = 'R$ ' + valor;
+
+});
+
+</script>
+
+</body>
+</html>
